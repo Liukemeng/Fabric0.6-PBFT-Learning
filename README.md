@@ -15,7 +15,7 @@
    (2) 其他模块需要向共识模块提供的接口Stack;  
  
 2. 结构体  
-  (1) pbftCore实现了共识模块核心的算法逻辑，包括RequestBatch、PrePrepare、Prepare、Commit、Execute、ExecDoneSync、Checkpoint、ViewChange、NewView、StateUpdate等; 
+  (1) pbftCore实现了共识模块核心的算法逻辑，包括RequestBatch、PrePrepare、Prepare、Commit、Execute、ExecDoneSync、Checkpoint、ViewChange、NewView、StateUpdate等阶段流程; 
   
     (2)obcBatch是对共识模块在一个高层次的封装，主要是将tx封装为request并将request广播给其他节点，以及其他模块执行、提交、数据同步完之后共识模块需要处理的方法；  
   
