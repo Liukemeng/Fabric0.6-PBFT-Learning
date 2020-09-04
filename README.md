@@ -21,7 +21,7 @@
   
 3. 消息循环  
   fabric0.6-pbft是以事件驱动模型进行实现，本节点收到其他节点发送过来的消息或者本节点其他模块产生的消息，将封装为batchMessageEvent放入到名为events的channle中，然后开启对该channel的监听，
-  随后，将调用obcbatch.ProcessEvent(）进行处理，最终共识的事件，将调用pbftCore.ProcessEvent()进行处理；  
+  随后，将调用obcbatch.ProcessEvent(）进行处理，最终，共识事件将调用pbftCore.ProcessEvent()进行处理；  
   
 4. 重要缓存字段的生命周期  
  （1）obcBatch中batchStore、pendingRequests、outstandingRequests字段的生命周期; 
