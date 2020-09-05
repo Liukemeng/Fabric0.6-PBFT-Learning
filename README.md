@@ -20,7 +20,7 @@
     (2)obcBatch是对共识模块在一个高层次的封装，主要是将tx封装为request并将request广播给其他节点，以及其他模块执行、提交、数据同步完之后共识模块需要处理的方法；  
   
 3. 消息循环  
-  fabric0.6-pbft是以事件驱动模型进行实现，本节点收到其他节点发送过来的消息或者本节点其他模块产生的消息，将封装为batchMessageEvent放入到名为events的channle中，然后开启对该channel的监听，
+  fabric0.6-pbft是以事件驱动模型进行实现，本节点收到其他节点发送过来的消息或者本节点其他模块产生的消息，将封装为batchMessageEvent放入到名为events的channel中，然后开启对该channel的监听，
   随后，将调用obcbatch.ProcessEvent(）进行处理，最终，共识事件将调用pbftCore.ProcessEvent()进行处理；  
   
 4. 重要缓存字段的生命周期  
