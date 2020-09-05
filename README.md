@@ -29,6 +29,6 @@
     （2）pbftCore中outstandingReqBatches、reqBatchStore、CerStore字段的生命周期；  
  
 5. ViewChange过程的关键点  
- （1）fabric0.6-PBFT中之后ViewChange消息是签名的，其他所有的共识消息是没有签名的，所以视图转换的流程是参照的99年短论文，但是视图转换过程相关变量的计算是参照的02年的长论文；
+ （1）fabric0.6-PBFT中,只有ViewChange消息是签名的，其他所有的共识消息是没有签名的，所以视图转换的流程是参照的99年短论文，但是视图转换过程相关变量的计算是参照的02年的长论文；
  
     （2）99年短论文《Practical Byzantine Fault Tolerance》、02年长论文《Practical Byzantine Fault Tolerance and Proactive Recovery》；
