@@ -29,8 +29,8 @@
     （2）pbftCore中outstandingReqBatches、reqBatchStore、CerStore字段的生命周期；  
     
    
-5. 重要定时器的生命周期及softreStartTimer()和reStartTimer()的区别 
- （1）obcBatch中batchTimer; 
+5. 重要定时器的生命周期及softreStartTimer()和reStartTimer()的区别  
+ （1）obcBatch中batchTimer;  
  
     （2）pbftCore中newViewTimer(正常一个块的共识时间，或者发送vc到收到quorum个vc的时间间隔)、nullRequestTimer、vcResendTimer；  
     
