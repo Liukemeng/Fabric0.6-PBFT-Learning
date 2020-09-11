@@ -27,8 +27,14 @@
  （1）obcBatch中batchStore、pendingRequests、outstandingRequests字段的生命周期; 
  
     （2）pbftCore中outstandingReqBatches、reqBatchStore、CerStore字段的生命周期；  
+    
+   
+5. 重要定时器的生命周期及softreStartTimer()和reStartTimer()的区别 
+ （1）obcBatch中batchTimer; 
  
-5. ViewChange过程的关键点  
+    （2）pbftCore中newViewTimer(正常一个块的共识时间，或者发送vc到收到quorum个vc的时间间隔)、nullRequestTimer、vcResendTimer；  
+    
+6. ViewChange过程的关键点  
  （1）fabric0.6-PBFT中,只有ViewChange消息是签名的，其他所有的共识消息是没有签名的，所以视图转换的流程是参照的99年短论文，但是视图转换过程相关变量的计算是参照的02年的长论文；
  
     （2）99年短论文《Practical Byzantine Fault Tolerance》、02年长论文《Practical Byzantine Fault Tolerance and Proactive Recovery》；
